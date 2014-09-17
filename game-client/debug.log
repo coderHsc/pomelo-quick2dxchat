@@ -17,35 +17,36 @@
 lua_loadChunksFromZIP() - load zip file: D:\codeTools\quick-cocos2d-x-2.2.5\lib\framework_precompiled\framework_precompiled.zip
 lua_loadChunksFromZIP() - loaded chunks count: 108
 ------------------------------------------------
-LOAD LUA FILE: C:/Users/hushencheng/Desktop/pomelo-quick2dx-chat/game-client/scripts/main.lua
+LOAD LUA FILE: C:/Users/hushencheng/Desktop/pomelo-quick2dxchat/game-client/scripts/main.lua
 ------------------------------------------------
-[0.3041] [INFO] 
-[0.3045] [INFO] # DEBUG                        = 1
-[0.3050] [INFO] #
-[0.3056] [INFO] # device.platform              = windows
-[0.3061] [INFO] # device.model                 = unknown
-[0.3066] [INFO] # device.language              = cn
-[0.3071] [INFO] # device.writablePath          = C:\Users\hushencheng\Desktop\pomelo-quick2dx-chat\game-client\
-[0.3078] [INFO] # device.cachePath             = C:\Users\hushencheng\Desktop\pomelo-quick2dx-chat\game-client\
-[0.3085] [INFO] # device.directorySeparator    = \
-[0.3089] [INFO] # device.pathSeparator         = ;
-[0.3092] [INFO] #
-[0.3108] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_WIDTH
-[0.3112] [INFO] # CONFIG_SCREEN_WIDTH          = 480.00
-[0.3119] [INFO] # CONFIG_SCREEN_HEIGHT         = 720.00
-[0.3125] [INFO] # display.widthInPixels        = 640.00
-[0.3130] [INFO] # display.heightInPixels       = 960.00
-[0.3134] [INFO] # display.contentScaleFactor   = 1.33
-[0.3138] [INFO] # display.width                = 480.00
-[0.3142] [INFO] # display.height               = 720.00
-[0.3147] [INFO] # display.cx                   = 240.00
-[0.3153] [INFO] # display.cy                   = 360.00
-[0.3159] [INFO] # display.left                 = 0.00
-[0.3163] [INFO] # display.right                = 480.00
-[0.3167] [INFO] # display.top                  = 720.00
-[0.3173] [INFO] # display.bottom               = 0.00
-[0.3178] [INFO] # display.c_left               = -240.00
-[0.3181] [INFO] # display.c_right              = 240.00
-[0.3186] [INFO] # display.c_top                = 360.00
-[0.3191] [INFO] # display.c_bottom             = -360.00
-[0.3195] [INFO] #
+[0.3067] [INFO] 
+[0.3070] [INFO] # DEBUG                        = 1
+[0.3074] [INFO] #
+[0.3079] [INFO] # device.platform              = windows
+[0.3082] [INFO] # device.model                 = unknown
+[0.3086] [INFO] # device.language              = cn
+[0.3090] [INFO] # device.writablePath          = C:\Users\hushencheng\Desktop\pomelo-quick2dxchat\game-client\
+[0.3097] [INFO] # device.cachePath             = C:\Users\hushencheng\Desktop\pomelo-quick2dxchat\game-client\
+[0.3105] [INFO] # device.directorySeparator    = \
+[0.3109] [INFO] # device.pathSeparator         = ;
+[0.3113] [INFO] #
+[0.3129] [INFO] # CONFIG_SCREEN_AUTOSCALE      = FIXED_WIDTH
+[0.3132] [INFO] # CONFIG_SCREEN_WIDTH          = 480.00
+[0.3138] [INFO] # CONFIG_SCREEN_HEIGHT         = 320.00
+[0.3145] [INFO] # display.widthInPixels        = 960.00
+[0.3150] [INFO] # display.heightInPixels       = 640.00
+[0.3155] [INFO] # display.contentScaleFactor   = 2.00
+[0.3160] [INFO] # display.width                = 480.00
+[0.3167] [INFO] # display.height               = 320.00
+[0.3172] [INFO] # display.cx                   = 240.00
+[0.3176] [INFO] # display.cy                   = 160.00
+[0.3180] [INFO] # display.left                 = 0.00
+[0.3185] [INFO] # display.right                = 480.00
+[0.3191] [INFO] # display.top                  = 320.00
+[0.3195] [INFO] # display.bottom               = 0.00
+[0.3200] [INFO] # display.c_left               = -240.00
+[0.3207] [INFO] # display.c_right              = 240.00
+[0.3212] [INFO] # display.c_top                = 160.00
+[0.3217] [INFO] # display.c_bottom             = -160.00
+[0.3222] [INFO] #
+[1.2816] result=12345  Alice  112323

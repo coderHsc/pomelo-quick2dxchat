@@ -1,0 +1,126 @@
+package Messages;
+
+message LoginAccountRequest
+{
+    required string username = 1;
+    required string password = 2;
+    required uint32 channel = 3;
+    required string openid = 4;
+    
+    
+}
+message LoginAccountResponse
+{
+    required int32 result = 1; //响应结果code
+    required uint64 accountid = 2; // 用户id
+    optional int32 serverid = 3; // 上次登陆的服务器id
+    message Server {
+        required int32 serverid = 1; //服务器ID
+        required string servername = 2; //服务名称
+        required string serverurl = 3; //服务器地址
+        required int32 status = 4; //状态
+        required bool hasplayer = 5; //是否有角色
+    }
+    repeated Server serverList = 4; //服务器列表
+    required string logincookie = 5; //登陆验证码
+    required string openid = 6; //平台用户id
+    
+    
+}
+
+message EnterSceneRequest
+{
+    required uint64 uid = 1; // 用户id
+    optional int32 serverid = 2 [default = 0]; //服务器ID
+}
+message EnterSceneResponse
+{
+        required int32 result = 1; //响应结果
+        required uint64 uid = 2; // 用户id
+        required int32 serverid = 3; // 服务器id
+        required int32 power = 4; // 体力
+        required int32 exp = 5; // 经验
+        required int32 level = 6; // 当等级为0表示未招募
+        required int32 talent = 7; // 天赋
+        required int32 gold = 8; // 金币
+        required int32 diamond = 9; // 钻石
+        required int32 headid = 10; // 头像ID
+        required string playername = 11; // 召唤师名称
+        required int32 buytimes = 12; // 表示今日已购买体力次数（每天0时清零）
+        required int32 viplevel = 13; // VIP级别
+        required int32 spellpoint = 14; // 技能点
+        required int32 ranking = 15; // PVP排名
+        required int32 guildid = 16; // 所属公会ID
+        message Item {
+          required uint64 itemid = 1; //道具ID
+          required int32 itemtplid = 2; //道具模板ID
+          required int32 itemcount = 3; //道具数量
+        }
+        repeated Item itemList = 17; //物品列表
+        message Hero {
+          required uint64 hid = 1; // 英雄ID
+          required uint64 uid = 2; // 用户id
+          required int32 herotplid = 3; // 英雄模板ID
+          required int32 exp = 4; // 经验
+          required int32 level = 5; // 当等级为0表示未招募
+          required int32 herostar = 6; // 英雄星级
+          required int32 quality = 7; // 英雄品质
+          required int32 spell1level = 8; // 技能1等级
+          required int32 spell2level = 9; // 技能2等级
+          required int32 spell3level = 10; // 技能3等级
+          required int32 spell4level = 11; // 技能4等级
+          message Equipment {
+            required uint64 eid = 1; // 装备ID
+            required uint64 hid = 2; // 英雄ID
+            required int32 equiptplid = 3; // 装备模板ID
+            required int32 start = 4; // 装备星级
+            required int32 position = 5; // 穿戴位置
+            required int32 enchantexp = 6; //附魔经验
+          }
+          repeated Equipment equipmentList = 12; //英雄装备
+        }
+        repeated Hero heroList = 18; //英雄列表
+        message PveData {
+          required uint64 copyid = 1; // 副本ID
+          required uint64 uid = 2; // 用户id
+          required int32 copytplid = 3; // 副本模板ID
+          required int32 copystart = 4; // 副本星级
+          required int32 copycount = 5; // 副本剩余次数
+        }
+        repeated PveData pveList = 19; //pve列表
+        required string newfunctions = 20; //新功能开启(一位代表一个功能：0未开启，1已开启)
+}
+
+message LoginGameRequest
+{
+    required uint64 accountid = 1; //账号流水id
+    required string logincookie = 2; //登陆验证码
+    required uint32 serverid = 3; //服务器id
+    optional string imei = 4; //设备唯一码
+    optional string device = 5; //设备名称
+}
+message LoginGameResponse
+{
+        required int32 result = 1; //响应结果code
+        message User {
+            required uint64 uid = 1; //用户id
+            required string nickname = 2; //角色名称
+            required uint32 level = 3; //角色等级
+        }
+        repeated User users = 2; //所有角色
+        required string secret = 3; //密钥
+        required string token = 4; //令牌
+}
+
+message CheckLoginRequest
+{
+    required uint64 accountid = 1; //账号ID
+    required string logincookie = 2; //验证码
+    required uint32 serverid = 3; //服务器id
+    optional string imei = 4; //设备唯一码
+    optional string device = 5; //设备名称
+}
+message CheckLoginResponse
+{
+    required int32 result = 1; //响应结果code
+}
